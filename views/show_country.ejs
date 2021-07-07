@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Country: <%=c.country %>
+    </title>
+    <style>
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        img {
+            padding-bottom: 10px;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+    <h1 style="text-align: center;">
+        <%=c.country %>
+    </h1>
+    <div>
+        <div class="card" mb-3>
+            <div class="thumbnail">
+                <img class="img-fluid center" alt="" src="<%= c.countryInfo.flag %>">
+            </div>
+            <h3 class="text-warning card-text">
+                Total Cases: <%= c.cases %>
+            </h3>
+            <h3 class="text-warning card-text">
+                Today Cases: <%= c.todayCases %>
+            </h3>
+            <h3 class="text-success card-text">
+                Total Recovered: <%= c.recovered %>
+            </h3>
+            <h3 class="text-success card-text">
+                Today Recovered: <%= c.todayRecovered %>
+            </h3>
+            <h3 class="text-danger card-text">
+                Total Deaths: <%= c.deaths %>
+            </h3>
+            <h3 class="text-danger card-text">
+                Today Deaths: <%= c.todayDeaths %>
+            </h3>
+            <h3 class="text-warning card-success">
+                Active Cases: <%= c.active %>
+            </h3>
+            <h3 class="text-danger card-text">
+                Critical Cases: <%= c.critical %>
+            </h3>
+        </div>
+    </div>
+</body>
+
+</html>
